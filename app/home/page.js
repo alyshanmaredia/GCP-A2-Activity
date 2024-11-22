@@ -90,7 +90,7 @@ export default function Component() {
 			if (user) {
 				try {
 					const response = await fetch(
-						process.env.NEXT_PUBLIC_AWS_FUNCTION_CHECKATTENDANCERECORD,
+						process.env.NEXT_PUBLIC_GCP_FUNCTION_CHECKATTENDANCERECORD,
 						{
 							method: "POST",
 							headers: {
@@ -156,7 +156,7 @@ export default function Component() {
 			};
 
 			const response = await fetch(
-				process.env.NEXT_PUBLIC_AWS_FUNCTION_CHECKATTENDANCERECORD,
+				process.env.NEXT_PUBLIC_GCP_FUNCTION_CHECKATTENDANCERECORD,
 				{
 					method: "POST",
 					headers: {
@@ -178,7 +178,7 @@ export default function Component() {
 			if (data.found) {
 				console.log("record exists");
 				const updateResponse = await fetch(
-					process.env.NEXT_PUBLIC_AWS_FUNCTION_UPDATEATTENDANCERECORD,
+					process.env.NEXT_PUBLIC_GCP_FUNCTION_UPDATEATTENDANCERECORD,
 					{
 						method: "PATCH",
 						headers: {
@@ -195,7 +195,7 @@ export default function Component() {
 				console.log("Attendance updated:", attendanceObject);
 			} else {
 				const createResponse = await fetch(
-					process.env.NEXT_PUBLIC_AWS_FUNCTION_CREATEATTENDANCERECORD,
+					process.env.NEXT_PUBLIC_GCP_FUNCTION_CREATEATTENDANCERECORD,
 					{
 						method: "POST",
 						headers: {
@@ -227,7 +227,7 @@ export default function Component() {
 				userId: user.userId,
 			};
 			const generateReport = await fetch(
-				process.env.NEXT_PUBLIC_AWS_FUNCTION_GENERATEPDFREPORT,
+				process.env.NEXT_PUBLIC_GCP_FUNCTION_GENERATEPDFREPORT,
 				{
 					method: "POST",
 					headers: {

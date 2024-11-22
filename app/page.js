@@ -94,7 +94,7 @@ export default function LandingPage() {
 
 		try {
 			setIsLoading(true);
-			const response = await fetch(process.env.NEXT_PUBLIC_AWS_FUNCTION_LOGIN, {
+			const response = await fetch(process.env.NEXT_PUBLIC_GCP_FUNCTION_LOGIN, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -149,10 +149,9 @@ export default function LandingPage() {
 		setIsLoading(true);
 
 		try {
-			console.log("Alishan");
-			console.log(process.env.NEXT_PUBLIC_AWS_FUNCTION_LOGIN);
+			console.log(process.env.NEXT_PUBLIC_GCP_FUNCTION_LOGIN);
 			const response = await fetch(
-				process.env.NEXT_PUBLIC_AWS_FUNCTION_REGISTRATION,
+				process.env.NEXT_PUBLIC_GCP_FUNCTION_REGISTRATION,
 				{
 					method: "POST",
 					headers: {
