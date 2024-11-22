@@ -205,9 +205,9 @@ export default function LandingPage() {
 	};
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-4'>
 			<Card className='w-full max-w-md bg-white shadow-lg border-0'>
-				<CardHeader className='space-y-1 bg-green-600 text-white rounded-t-lg'>
+				<CardHeader className='space-y-1 bg-blue-600 text-white rounded-t-lg'>
 					<div className='flex items-center justify-center space-x-2'>
 						<div className='relative w-10 h-10'>
 							<Sunrise className='absolute h-8 w-8 text-yellow-300' />
@@ -222,7 +222,7 @@ export default function LandingPage() {
 						className='w-full'
 						onValueChange={OnChangeOfTab}
 					>
-						<TabsList className='grid w-full grid-cols-2 mb-8 bg-green-100'>
+						<TabsList className='grid w-full grid-cols-2 mb-8 bg-blue-100'>
 							<TabsTrigger
 								value='signin'
 								className='data-[state=active]:bg-white'
@@ -246,7 +246,7 @@ export default function LandingPage() {
 										Email
 									</Label>
 									<div className='relative'>
-										<Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='email-signin'
 											placeholder='m@example.com'
@@ -255,7 +255,7 @@ export default function LandingPage() {
 												setLoginEmail(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -267,7 +267,7 @@ export default function LandingPage() {
 										Password
 									</Label>
 									<div className='relative'>
-										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='password-signin'
 											type='password'
@@ -276,7 +276,7 @@ export default function LandingPage() {
 												setLoginPassword(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -285,7 +285,7 @@ export default function LandingPage() {
 								)}
 								<Button
 									type='submit'
-									className='w-full bg-green-600 hover:bg-green-700 text-white'
+									className='w-full bg-blue-600 hover:bg-blue-700 text-white'
 									disabled={isLoading}
 								>
 									{isLoading ? (
@@ -306,7 +306,7 @@ export default function LandingPage() {
 										Full Name
 									</Label>
 									<div className='relative'>
-										<User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='name-register'
 											type='text'
@@ -316,7 +316,7 @@ export default function LandingPage() {
 												setFullname(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -328,7 +328,7 @@ export default function LandingPage() {
 										Email
 									</Label>
 									<div className='relative'>
-										<Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='email-register'
 											placeholder='m@example.com'
@@ -337,7 +337,7 @@ export default function LandingPage() {
 												setRegisterEmail(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -349,7 +349,7 @@ export default function LandingPage() {
 										Password
 									</Label>
 									<div className='relative'>
-										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='password-register'
 											type='password'
@@ -358,7 +358,7 @@ export default function LandingPage() {
 												setRegisterPassword(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -370,7 +370,7 @@ export default function LandingPage() {
 										Confirm Password
 									</Label>
 									<div className='relative'>
-										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-4 w-4' />
+										<Lock className='absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-600 h-4 w-4' />
 										<Input
 											id='confirm-password-register'
 											type='password'
@@ -379,7 +379,7 @@ export default function LandingPage() {
 												setRegisterConfirmPassword(e.target.value);
 											}}
 											required
-											className='pl-10 border-green-200 focus:border-green-500 focus:ring-green-500'
+											className='pl-10 border-blue-200 focus:border-blue-500 focus:ring-blue-500'
 										/>
 									</div>
 								</div>
@@ -403,7 +403,7 @@ export default function LandingPage() {
 								)}
 								<Button
 									type='submit'
-									className='w-full bg-green-600 hover:bg-green-700 text-white'
+									className='w-full bg-blue-600 hover:bg-blue-700 text-white'
 									disabled={isLoading}
 								>
 									{isLoading ? (

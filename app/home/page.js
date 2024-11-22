@@ -272,14 +272,14 @@ export default function Component() {
 	};
 
 	return (
-		<div className='min-h-screen bg-green-50'>
+		<div className='min-h-screen bg-blue-50'>
 			<header className='bg-white shadow-sm'>
 				<div className='max-w-md mx-auto px-4 py-3 flex justify-between items-center'>
-					<h1 className='text-xl font-semibold text-green-800'>Prayer Times</h1>
+					<h1 className='text-xl font-semibold text-blue-800'>Prayer Times</h1>
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button variant='ghost' size='icon' className='rounded-full'>
-								<User className='h-5 w-5 text-green-600' />
+								<User className='h-5 w-5 text-blue-600' />
 								<span className='sr-only'>Open user menu</span>
 							</Button>
 						</DropdownMenuTrigger>
@@ -308,14 +308,12 @@ export default function Component() {
 
 			<div className='max-w-md mx-auto p-8 space-y-8'>
 				<header className='text-center'>
-					<h1 className='text-3xl font-bold text-green-800'>Hi, {fullName}</h1>
-					<p className='text-green-600 mt-2'>
-						Today&apos;s Date: {currentDate}
-					</p>
+					<h1 className='text-3xl font-bold text-blue-800'>Hi, {fullName}</h1>
+					<p className='text-blue-600 mt-2'>Today&apos;s Date: {currentDate}</p>
 				</header>
 
 				<section className='bg-white rounded-lg p-6 shadow-sm'>
-					<h2 className='text-xl font-semibold mb-4 text-green-700'>
+					<h2 className='text-xl font-semibold mb-4 text-blue-700'>
 						Prayer Times
 					</h2>
 					<ul className='space-y-2'>
@@ -324,10 +322,8 @@ export default function Component() {
 								key={prayer.name}
 								className='flex justify-between items-center py-2'
 							>
-								<span className='font-medium text-green-600'>
-									{prayer.name}
-								</span>
-								<span className='text-green-500'>{prayer.time}</span>
+								<span className='font-medium text-blue-600'>{prayer.name}</span>
+								<span className='text-blue-500'>{prayer.time}</span>
 							</li>
 						))}
 					</ul>
@@ -335,14 +331,14 @@ export default function Component() {
 
 				<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 					<DialogTrigger asChild>
-						<Button className='w-full bg-green-600 hover:bg-green-700 text-white'>
+						<Button className='w-full bg-blue-600 hover:bg-blue-700 text-white'>
 							<CalendarIcon className='mr-2 h-4 w-4' />
 							Mark Attendance
 						</Button>
 					</DialogTrigger>
 					<DialogContent className='sm:max-w-[425px] bg-white'>
 						<DialogHeader>
-							<DialogTitle className='text-green-800'>
+							<DialogTitle className='text-blue-800'>
 								Mark Voluntary Attendance
 							</DialogTitle>
 						</DialogHeader>
@@ -355,13 +351,13 @@ export default function Component() {
 									className='rounded-md border-none'
 									classNames={{
 										day_selected:
-											"bg-green-600 text-white hover:bg-green-600 hover:text-white focus:bg-green-600 focus:text-white",
-										day_today: "bg-green-100 text-green-900",
+											"bg-blue-600 text-white hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white",
+										day_today: "bg-blue-100 text-blue-900",
 									}}
 								/>
 							</div>
 							<div className='space-y-2'>
-								<Label className='text-base font-semibold text-green-700'>
+								<Label className='text-base font-semibold text-blue-700'>
 									Select Prayers Attended:
 								</Label>
 								{prayerTimes.map((prayer) => (
@@ -375,11 +371,11 @@ export default function Component() {
 											onCheckedChange={() =>
 												handleAttendanceChange(prayer.name)
 											}
-											className='border-green-400 text-green-600 focus:ring-green-500'
+											className='border-blue-400 text-blue-600 focus:ring-blue-500'
 										/>
 										<Label
 											htmlFor={prayer.name}
-											className='text-sm font-medium leading-none text-green-700'
+											className='text-sm font-medium leading-none text-blue-700'
 										>
 											{prayer.name}
 										</Label>
@@ -391,13 +387,13 @@ export default function Component() {
 							<Button
 								variant='outline'
 								onClick={handleCancel}
-								className='border-green-500 text-green-700 hover:bg-green-50'
+								className='border-blue-500 text-blue-700 hover:bg-blue-50'
 							>
 								Cancel
 							</Button>
 							<Button
 								onClick={handleSave}
-								className='bg-green-600 text-white hover:bg-green-700'
+								className='bg-blue-600 text-white hover:bg-blue-700'
 							>
 								Save
 							</Button>
@@ -407,7 +403,7 @@ export default function Component() {
 				<Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
 					<DialogContent className='sm:max-w-[425px] bg-white'>
 						<DialogHeader>
-							<DialogTitle className='text-green-800'>
+							<DialogTitle className='text-blue-800'>
 								{isGeneratingReport
 									? "Generating Report"
 									: "Report Generated Successfully"}
@@ -416,22 +412,22 @@ export default function Component() {
 						<div className='py-4'>
 							{isGeneratingReport ? (
 								<div className='flex flex-col items-center justify-center space-y-4'>
-									<Loader2 className='h-8 w-8 animate-spin text-green-600' />
-									<p className='text-green-600'>Generating your report...</p>
+									<Loader2 className='h-8 w-8 animate-spin text-blue-600' />
+									<p className='text-blue-600'>Generating your report...</p>
 								</div>
 							) : (
 								<>
-									<p className='text-green-600 mb-4'>
+									<p className='text-blue-600 mb-4'>
 										Your report has been generated successfully. You can access
 										it using the link below:
 									</p>
-									<div className='flex items-center space-x-2 bg-green-50 p-3 rounded-md'>
-										<Link className='h-4 w-4 text-green-600' />
+									<div className='flex items-center space-x-2 bg-blue-50 p-3 rounded-md'>
+										<Link className='h-4 w-4 text-blue-600' />
 										<a
 											href={reportLink}
 											target='_blank'
 											rel='noopener noreferrer'
-											className='text-green-700 hover:underline break-all'
+											className='text-blue-700 hover:underline break-all'
 										>
 											{reportLink}
 										</a>
@@ -442,7 +438,7 @@ export default function Component() {
 						<DialogFooter>
 							<DialogClose asChild>
 								<Button
-									className='bg-green-600 text-white hover:bg-green-700'
+									className='bg-blue-600 text-white hover:bg-blue-700'
 									disabled={isGeneratingReport}
 								>
 									{isGeneratingReport ? "Generating..." : "Close"}
